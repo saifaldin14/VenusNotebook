@@ -10,7 +10,7 @@ import Footer from "./views/Footer/Footer";
 
 import PostPage from "./views/PostPage/PostPage";
 import BlogPage from "./views/BlogPage/BlogPage";
-import CreateBlogPage from "./views/BlogPage/Section.js/CreatePage";
+import CreateBlogPage from "./views/BlogPage/Sections/CreatePage";
 
 function App() {
   return (
