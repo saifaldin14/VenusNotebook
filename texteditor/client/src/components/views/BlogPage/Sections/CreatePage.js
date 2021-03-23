@@ -25,17 +25,21 @@ const CreatePage = (props) => {
   const onSubmit = (event) => {
     event.preventDefault();
 
+    // Clear contents in editor after submitting
     setContent("");
 
+    // Ensure user is logged in before submitting
     if (user.userData && !user.userData.isAuth) {
       return alert("Please Log in first");
     }
 
+    // Get the user's data so that we can make a POST request
     const variables = {
       content: content,
       userID: user.userData._id,
     };
 
+    // Make the post request
     axios.post("/api/blog/createPost", variables).then((response) => {
       if (response) {
         message.success("Post Created!");
