@@ -12,7 +12,7 @@ import PostPage from "./views/PostPage/PostPage";
 import BlogPage from "./views/BlogPage/BlogPage";
 import CreateBlogPage from "./views/BlogPage/Sections/CreatePage";
 
-function App() {
+const App = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <NavBar />
@@ -37,6 +37,6 @@ function App() {
       <Footer />
     </Suspense>
   );
-}
+};
 
 export default App;

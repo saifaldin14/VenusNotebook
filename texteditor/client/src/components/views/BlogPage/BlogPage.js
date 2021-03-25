@@ -5,7 +5,7 @@ import { Card, Icon, Avatar, Col, Typography, Row } from "antd";
 const { Title } = Typography;
 const { Meta } = Card;
 
-function BlogPage() {
+const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -53,6 +53,6 @@ function BlogPage() {
       <Row gutter={[32, 16]}>{renderCards}</Row>
     </div>
   );
-}
+};
 
 export default BlogPage;

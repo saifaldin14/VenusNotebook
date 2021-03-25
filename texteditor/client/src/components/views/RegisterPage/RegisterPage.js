@@ -30,7 +30,7 @@ const tailFormItemLayout = {
   },
 };
 
-function RegisterPage(props) {
+const RegisterPage = (props) => {
   const dispatch = useDispatch();
   return (
     <Formik
@@ -220,6 +220,6 @@ function RegisterPage(props) {
       }}
     </Formik>
   );
-}
+};
 
 export default RegisterPage;

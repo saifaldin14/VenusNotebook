@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 
 const { Title } = Typography;
 
-function LoginPage(props) {
+const LoginPage = (props) => {
   const dispatch = useDispatch();
   const rememberMeChecked = localStorage.getItem("rememberMe") ? true : false;
 
@@ -179,6 +179,6 @@ function LoginPage(props) {
       }}
     </Formik>
   );
-}
+};
 
 export default withRouter(LoginPage);

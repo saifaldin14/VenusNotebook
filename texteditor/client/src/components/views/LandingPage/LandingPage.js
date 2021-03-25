@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCode } from "react-icons/fa";
 
-function LandingPage() {
+const LandingPage = () => {
   return (
     <>
       <div className="app">
@@ -13,6 +13,6 @@ function LandingPage() {
       </div>
     </>
   );
-}
+};
 
 export default LandingPage;

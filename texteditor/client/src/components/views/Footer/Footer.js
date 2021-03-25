@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "antd";
 
-function Footer() {
+const Footer = () => {
   return (
     <div
       style={{
@@ -19,6 +19,6 @@ function Footer() {
       </p>
     </div>
   );
-}
+};
 
 export default Footer;
