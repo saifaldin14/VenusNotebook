@@ -54,7 +54,6 @@ class Clipboard extends QuillClipboard {
           .catch((error) => console.error(error));
       });
     } else {
-      //console.log('when to use this') 보통 다른 곳에서  paste 한다음에  copy하면 이쪽 걸로 한다.
       super.onPaste(e);
     }
   }
@@ -107,7 +106,6 @@ class VideoBlot extends BlockEmbed {
     } else {
       return node.getAttribute("src");
     }
-    // return { src: node.getAttribute('src'), alt: node.getAttribute('title') };
   }
 }
 
@@ -121,7 +119,6 @@ class FileBlot extends BlockEmbed {
     prefixTag.innerText = "첨부파일 - ";
 
     const bTag = document.createElement("b");
-    //위에 첨부파일 글자 옆에  파일 이름이 b 태그를 사용해서 나온다.
     bTag.innerText = value;
 
     const linkTag = document.createElement("a");
@@ -129,7 +126,6 @@ class FileBlot extends BlockEmbed {
     linkTag.setAttribute("target", "_blank");
     linkTag.setAttribute("className", "file-link-inner-post");
     linkTag.appendChild(bTag);
-    //linkTag 이런식으로 나온다 <a href="btn_editPic@3x.png" target="_blank" classname="file-link-inner-post"><b>btn_editPic@3x.png</b></a>
 
     const node = super.create();
     node.appendChild(prefixTag);
@@ -226,7 +222,6 @@ class QuillEditor extends React.Component {
     );
   };
 
-  // I V F P들을  눌렀을떄 insertImage: this.imageHandler로 가서  거기서 inputOpenImageRef를 클릭 시킨다.
   imageHandler = () => {
     this.inputOpenImageRef.current.click();
   };
@@ -264,8 +259,6 @@ class QuillEditor extends React.Component {
           let range = quill.getSelection();
           let position = range ? range.index : 0;
 
-          //먼저 노드 서버에다가 이미지를 넣은 다음에   여기 아래에 src에다가 그걸 넣으면 그게
-          //이미지 블롯으로 가서  크리에이트가 이미지를 형성 하며 그걸 발류에서     src 랑 alt 를 가져간후에  editorHTML에 다가 넣는다.
           quill.insertEmbed(position, "image", {
             src: "http://localhost:5000/" + response.data.url,
             alt: response.data.fileName,
@@ -445,7 +438,6 @@ class QuillEditor extends React.Component {
     syntax: true,
     toolbar: {
       container: "#toolbar",
-      //id ="toorbar"는  그 위에 B I U S I V F P 이거 있는 곳이다.
       handlers: {
         insertImage: this.imageHandler,
         insertVideo: this.videoHandler,
