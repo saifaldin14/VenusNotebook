@@ -11,10 +11,10 @@ function BlogPage() {
   useEffect(() => {
     axios.get("/api/blog/getBlogs").then((response) => {
       if (response.data.success) {
-        console.log(response.data.blogs);
+        // console.log(response.data.blogs);
         setBlogs(response.data.blogs);
       } else {
-        alert("Couldnt get blog`s lists");
+        alert("couldn't get blog's lists");
       }
     });
   }, []);
@@ -49,7 +49,7 @@ function BlogPage() {
 
   return (
     <div style={{ width: "85%", margin: "3rem auto" }}>
-      <Title level={2}> Blog Lists </Title>
+      <Title level={2}> Document Lists </Title>
       <Row gutter={[32, 16]}>{renderCards}</Row>
     </div>
   );
