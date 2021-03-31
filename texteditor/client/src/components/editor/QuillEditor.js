@@ -4,9 +4,6 @@ import "react-quill/dist/quill.snow.css";
 
 import axios from "axios";
 const __ISMSIE__ = navigator.userAgent.match(/Trident/i) ? true : false;
-
-// Quill.register('modules/clipboard', PlainClipboard, true);
-
 const QuillClipboard = Quill.import("modules/clipboard");
 
 class Clipboard extends QuillClipboard {
@@ -27,7 +24,6 @@ class Clipboard extends QuillClipboard {
         axios
           .get(link)
           .then((payload) => {
-            // let title, image, url, description;
             let title, image, url;
             for (let node of this.getMetaTagElements(payload)) {
               if (node.getAttribute("property") === "og:title") {
@@ -39,9 +35,6 @@ class Clipboard extends QuillClipboard {
               if (node.getAttribute("property") === "og:url") {
                 url = node.getAttribute("content");
               }
-              // if (node.getAttribute("property") === "og:description") {
-              //     description = node.getAttribute("content");
-              // }
             }
 
             const rendered = `<a href=${url} target="_blank"><div><img src=${image} alt=${title} width="20%"/><span>${title}</span></div></a>`;
@@ -206,12 +199,6 @@ class QuillEditor extends React.Component {
   }
 
   handleChange = (html) => {
-    console.log("html", html);
-    // https://youtu.be/BbR-QCoKngE
-    // https://www.youtube.com/embed/ZwKhufmMxko
-    // https://tv.naver.com/v/9176888
-    // renderToStaticMarkup(ReactHtmlParser(html, options));
-
     this.setState(
       {
         editorHtml: html,
