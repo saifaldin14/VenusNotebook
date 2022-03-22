@@ -7,10 +7,10 @@ React.js, Redux, Redux-Thunk
 Empty Screen (no text, no code)
 ![](images/1.png)
 
-Example Molecule: H2O, Shape: Bent
+Code Cell (write Javascript code and view it compile and run in realtime in the browser)
 ![](images/2.png)
 
-Example Molecule: CH4, Shape: Tetrahydral
+Text Cell (a fully featured rich text editor to create dynamic and expressive textfiles)
 ![](images/3.png)
 
 Example Molecule: CO2, Shape: Linear
