@@ -13,11 +13,8 @@ Code Cell (write Javascript code and view it compile and run in realtime in the 
 Text Cell (a fully featured rich text editor to create dynamic and expressive textfiles)
 ![](images/3.png)
 
-Example Molecule: CO2, Shape: Linear
-![](images/5.png)
-
-Example Molecule: SF4, Shape: Seesaw
+Display Text Cell (no editing, complete view)
 ![](images/4.png)
 
-Example Molecule: SF4, Shape: Seesaw
+Switch cell positions
 ![](images/5.png)
