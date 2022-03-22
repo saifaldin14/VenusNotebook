@@ -1,8 +1,8 @@
-import { Dispatch } from 'redux';
-import { Action } from '../actions';
-import { ActionType } from '../action-types';
-import { saveCells } from '../action-creators';
-import { RootState } from '../reducers';
+import { Dispatch } from "redux";
+import { Action } from "../actions";
+import { ActionType } from "../action-types";
+import { saveCells } from "../action-creators";
+import { RootState } from "../reducers";
 
 export const persistMiddlware = ({
   dispatch,
