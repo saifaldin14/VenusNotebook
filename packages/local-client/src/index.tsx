@@ -5,12 +5,14 @@ import { Provider } from "react-redux";
 import { store } from "./state";
 import CellList from "./components/cell-list";
 
-const App = () => (
-  <Provider store={store}>
-    <div>
-      <CellList />
-    </div>
-  </Provider>
-);
+const App = () => {
+  return (
+    <Provider store={store}>
+      <div>
+        <CellList />
+      </div>
+    </Provider>
+  );
+};
 
 ReactDOM.render(<App />, document.querySelector("#root"));

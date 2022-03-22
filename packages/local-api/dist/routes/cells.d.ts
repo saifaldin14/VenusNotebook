@@ -1,4 +1,1 @@
-export declare const createCellsRouter: (
-  filePath: string,
-  dir: string
-) => import("express-serve-static-core").Router;
+export declare const createCellsRouter: (filename: string, dir: string) => import("express-serve-static-core").Router;

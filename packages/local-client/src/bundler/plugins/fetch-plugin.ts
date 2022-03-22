@@ -22,7 +22,9 @@ export const fetchPlugin = (inputCode: string) => {
           args.path
         );
 
-        if (cachedResult) return cachedResult;
+        if (cachedResult) {
+          return cachedResult;
+        }
       });
 
       build.onLoad({ filter: /.css$/ }, async (args: any) => {
