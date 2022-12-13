@@ -1,4 +1,4 @@
-# Interactive Text Editor
+# Venus Notebook - Interactive Text Editor
 An intuitive text and code editor notebook application that allows you to create text cards and write Javascript code in the browser!
 
 This project uses Lerna to manage 3 Typescript packages that include a custom CLI, local API and a local client developed. The project is developed using Node.js, 
